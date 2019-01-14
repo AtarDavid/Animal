@@ -1,5 +1,7 @@
 console.log("Hello groundhog!")
 
+const printOut = (outputText, outputField = "result") => { document.getElementById(outputField).innerHTML = `${outputText}` }
+
 const duplicateBy = (species) => {
     switch (species) {
         case 'dog': return 7;
@@ -14,7 +16,7 @@ const duplicateBy = (species) => {
 
 const calculateAge = (animal, age) => {
     const aniYears = duplicateBy(animal) * age;
-    return (aniYears > 0 ? console.log(`Your ${animal} is ${aniYears} years old in human years (${age} ${animal} years)!`) : console.log("Oops! I don't recognize this animal. Try again!"))
+    return (aniYears > 0 ? printOut(`Your ${animal} is ${aniYears} years old in human years (${age} ${animal} years)!`) : printOut("Oops! I don't recognize this animal. Try again!"))
 }
 
 calculateAge("cow", 3)
