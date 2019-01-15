@@ -6,9 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>You animal!</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
+    <div class="wrapInput">
+        <label for="howOld">How old is your pet?</label>
+        <br>
+        <input id="howOld" type="number" min="0" max="100" placeholder="Please type a number">
+    </div>
+    <p>Choose your pet type</p>
+    <div class="imgContainer">
+        <img id=cow src="https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1321&q=80"
+            alt="cow">
+        <img id=dog src="https://images.unsplash.com/photo-1528113668843-f1bfaf2df681?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
+            alt="dog">
+        <img id=chinchilla src="https://images.unsplash.com/photo-1499842340257-55ccb7a02645?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+            alt="chinchilla">
+    </div>
+
     <div id="result"></div>
     <script src="./assets/js/main.js"></script>
 </body>
