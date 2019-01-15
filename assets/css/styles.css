@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+.wrapInput, #result {
+    width: 100%;
+max-width: 800px;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+p, label {
+    font-size: 26px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+#howOld {
+    width: 200px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin: 10px auto;
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+max-width: 800px;
+margin: 20px auto;
+
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+	position: relative;
+    top: -6px;
+    right: -2px;
+	border: 0;
+	transition: all 40ms linear;
+	margin: 10px;
+    box-shadow: 0 0 0 1px #ebebeb inset, 0 0 0 2px rgba(255, 255, 255, 0.10) inset, -3px 5px 0 0 #BEBEBE, 0 8px 8px 0px rgba(0, 0, 0, .2);
+	background-color: #f9f9f9;
+}
+
+img:active:focus,
+img:focus:hover,
+img:focus {
+	-moz-outline-style: none;
+	outline: medium none;
+}
+
+img:active,
+img.active {
+    top: 2px;
+    right: 0.5px;
+    box-shadow: 0 0 0 1px #ebebeb inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, .1);
+	background-color: #f9f9f9;
+}
