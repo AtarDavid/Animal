@@ -1,7 +1,9 @@
 console.log("Hello groundhog!")
 
+// Outputs result to selected div
 const printOut = (outputText, outputField = "result") => { document.getElementById(outputField).innerHTML = `${outputText}` }
 
+// Returns conversion rate for given animal
 const duplicateBy = (species) => {
     switch (species) {
         case 'dog': return 7;
@@ -14,11 +16,30 @@ const duplicateBy = (species) => {
     }
 }
 
-const calculateAge = (animal, age) => {
+// Returns user provided age
+const getAge = () => { return parseInt(document.getElementById("howOld").value) }
+
+// Calculates animal age and prints out a string with said information
+const calculateAge = (animal) => {
+    let age = getAge()
+    console.log(age)
+    console.log(animal)
     const aniYears = duplicateBy(animal) * age;
-    return (aniYears > 0 ? printOut(`Your ${animal} is ${aniYears} years old in human years (${age} ${animal} years)!`) : printOut("Oops! I don't recognize this animal. Try again!"))
+    return (aniYears > 0 ? printOut(`Your ${animal} is ${aniYears} years old in human years (${age} ${animal} years)!`) : printOut("Oops! You must provide a valid number."))
 }
 
-calculateAge("cow", 3)
-calculateAge("dog", 12)
-calculateAge("horse", 2)
+const cow = () => {
+    calculateAge("cow")
+}
+
+const dog = () => {
+    calculateAge("dog")
+}
+
+const chinchilla = () => {
+    calculateAge("chinchilla")
+}
+
+document.querySelector('#cow').addEventListener('click', cow);
+document.querySelector('#dog').addEventListener('click', dog);
+document.querySelector('#chinchilla').addEventListener('click', chinchilla);
